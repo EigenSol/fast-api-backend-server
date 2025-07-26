@@ -164,11 +164,9 @@ def bind_routes(base_path, routes_list):
             )
 
 # Root Endpoint
-
 @app.get("/")
 async def root():
     return {"message": "API is up and running!"}
-
 # ---------------
 # Bind All Routes
 # ---------------
