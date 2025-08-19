@@ -6,7 +6,6 @@ from util.debug import debug, DEBUG_FILE
 import asyncio
 from piccolo.engine import engine_finder
 from seeders import seed_users
-from seeders import seed_devices
 
 
 
@@ -16,10 +15,6 @@ async def main():
     debug("⏳ Seeding users...")
     await seed_users.run()
     debug("✅ Users seeded.")
-
-    debug("⏳ Seeding devices...")
-    await seed_devices.run()
-    debug("✅ Devices seeded.")
 
     await engine_finder().close_connection_pool()
 

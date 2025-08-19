@@ -4,7 +4,7 @@ from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from piccolo.engine import engine_finder
 from contextlib import asynccontextmanager
-from routes.routes import routes  
+from routes.ExampleRoutes import routes  
 from core.Middleware import Middleware
 from util.config import config
 from util.debug import debug, DEBUG_FILE
