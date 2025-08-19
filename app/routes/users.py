@@ -4,7 +4,6 @@ from middlewares.SessionKeyMiddleware import SessionKeyMiddleware
 
 user_routes = [
     {
-        "method": "GET",
         "group": [
             {
                 "method": "GET",

@@ -3,7 +3,6 @@ from controllers.dev.DeviceController import DeviceController
 
 device_routes = [
     {
-        "method": "GET",
         "group": [
             {
                 "method": "GET",

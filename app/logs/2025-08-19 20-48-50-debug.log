@@ -1,0 +1,27 @@
+[2025-08-19 20:48:50] uvicorn.error
+[2025-08-19 20:48:50] Registering middleware: session:session=123
+[2025-08-19 20:48:50] Registered route: GET /users/ @ user
+[2025-08-19 20:48:50] Registering middleware: None
+[2025-08-19 20:48:50] Registered route: POST /users/ @ user
+[2025-08-19 20:48:50] Registering middleware: None
+[2025-08-19 20:48:50] Registered route: GET /users/{id} @ user
+[2025-08-19 20:48:50] Registering middleware: None
+[2025-08-19 20:48:50] Registered route: PUT /users/{id} @ user
+[2025-08-19 20:48:50] Registering middleware: None
+[2025-08-19 20:48:50] Registered route: DELETE /users/{id} @ user
+[2025-08-19 20:48:50] Registering middleware: None
+[2025-08-19 20:48:50] Registered route: GET /devices/ @ <unnamed>
+[2025-08-19 20:48:50] Registering middleware: None
+[2025-08-19 20:48:50] Registered route: POST /devices/ @ <unnamed>
+[2025-08-19 20:48:50] Registering middleware: None
+[2025-08-19 20:48:50] Registered route: GET /devices/{id} @ <unnamed>
+[2025-08-19 20:48:50] Registering middleware: None
+[2025-08-19 20:48:50] Registered route: PUT /devices/{id} @ <unnamed>
+[2025-08-19 20:48:50] Registering middleware: None
+[2025-08-19 20:48:50] Registered route: DELETE /devices/{id} @ <unnamed>
+[2025-08-19 20:48:50] Registering middleware: None
+[2025-08-19 20:48:50] Registered route: GET /devices/{id}/user @ <unnamed>
+[2025-08-19 20:48:50] Registering middleware: None
+[2025-08-19 20:48:50] Registered route: GET /admin/users/{id}/devices @ <unnamed>
+[2025-08-19 20:48:50] Registering middleware: None
+[2025-08-19 20:48:50] Registered route: GET /subscriptions @ <unnamed>

@@ -3,6 +3,7 @@ from controllers.dev.SubscriptionController import SubscriptionController
 
 guest_routes = [
     {
+        "name": "subscriptions",
         "method": "GET",
         "path": "/subscriptions",
         "handler": SubscriptionController.list,

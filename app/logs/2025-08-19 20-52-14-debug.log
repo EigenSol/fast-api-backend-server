@@ -1,0 +1,54 @@
+[2025-08-19 20:52:14] uvicorn.error
+[2025-08-19 20:52:14] Registering middleware: session:session=123
+[2025-08-19 20:52:14] Registered route: GET /users/ @ user.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: POST /users/ @ user.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: GET /users/{id} @ user.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: PUT /users/{id} @ user.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: DELETE /users/{id} @ user.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: GET /devices/ @ device.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: POST /devices/ @ device.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: GET /devices/{id} @ device.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: PUT /devices/{id} @ device.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: DELETE /devices/{id} @ device.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: GET /devices/{id}/user @ device.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: GET /admin/users/{id}/devices @ admin.devices
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: GET /subscriptions @ guest.subscriptions
+[2025-08-19 20:52:14] uvicorn.error
+[2025-08-19 20:52:14] Registering middleware: session:session=123
+[2025-08-19 20:52:14] Registered route: GET /users/ @ user.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: POST /users/ @ user.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: GET /users/{id} @ user.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: PUT /users/{id} @ user.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: DELETE /users/{id} @ user.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: GET /devices/ @ device.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: POST /devices/ @ device.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: GET /devices/{id} @ device.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: PUT /devices/{id} @ device.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: DELETE /devices/{id} @ device.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: GET /devices/{id}/user @ device.
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: GET /admin/users/{id}/devices @ admin.devices
+[2025-08-19 20:52:14] Registering middleware: None
+[2025-08-19 20:52:14] Registered route: GET /subscriptions @ guest.subscriptions

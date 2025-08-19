@@ -71,7 +71,7 @@ def register_middleware(middleware=None, middleware_args=[], middleware_kwargs={
 
 # Route registration
 
-def register_route(method, path, handler, middleware=None):
+def register_route(method, path, handler, middleware=None, name=None):
     debug(f"Registering middleware: {middleware}")
     async def endpoint(request: Request):
         return await handler(request)
@@ -141,26 +141,28 @@ def register_route(method, path, handler, middleware=None):
     if middleware:
         add_middleware(middleware)                
 
-
     app.add_api_route(
         path,
         endpoint,
         methods=[method],
-        name=f"{method}_{path.replace('/', '_')}"
+        name=name
     )
-    debug(f"Registered route: {method} {path}")
+    debug(f"Registered route: {method} {path} @ {name or '<unnamed>'}")
 
-def bind_routes(base_path, routes_list):
+def bind_routes(base_path, routes_list, base_name='', base_method='GET'):
     for route in routes_list:
         full_path = base_path + route.get("path", "")
+        full_name = base_name + route.get("name", '')
+        method = route.get("method", base_method)
         if "group" in route:
-            bind_routes(full_path, route["group"])
+            bind_routes(full_path, route["group"], full_name, method)
         else:
             register_route(
-                method=route["method"],
+                method=route.get("method", method),
                 path=full_path,
                 handler=route["handler"],
-                middleware=route.get("middleware")
+                middleware=route.get("middleware"),
+                name=full_name or None
             )
 
 # Root Endpoint
