@@ -7,6 +7,7 @@ from util.config import config
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 DEBUG_FILE = os.path.normpath(os.path.join(CURRENT_DIR, "../logs", f'{datetime.now().strftime("%Y-%m-%d %H-%M-%S")}-debug.log'))
 os.makedirs(os.path.dirname(DEBUG_FILE), exist_ok=True)
+
 def debug(*args, **kwargs):
     """Custom debug function to log messages if debug mode is enabled."""
     if config("debug", False):
