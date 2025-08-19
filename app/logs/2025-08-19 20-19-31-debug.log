@@ -1,0 +1,13 @@
+[2025-08-19 20:19:31] uvicorn.error
+[2025-08-19 20:19:31] Registering middleware: None
+[2025-08-19 20:19:31] Registered route: Get /welcome
+[2025-08-19 20:19:31] Registering middleware: None
+[2025-08-19 20:19:31] Registered route: Get /products
+[2025-08-19 20:19:31] Registering middleware: None
+[2025-08-19 20:19:31] Registered route: Get /products/{id}
+[2025-08-19 20:19:31] Registering middleware: None
+[2025-08-19 20:19:31] Registered route: Delete /products/{id}
+[2025-08-19 20:19:31] Registering middleware: None
+[2025-08-19 20:19:31] Registered route: Put /products/{id}
+[2025-08-19 20:19:31] Registering middleware: None
+[2025-08-19 20:19:31] Registered route: GET /records

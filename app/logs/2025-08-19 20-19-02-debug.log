@@ -1,0 +1,26 @@
+[2025-08-19 20:19:02] uvicorn.error
+[2025-08-19 20:19:02] Registering middleware: None
+[2025-08-19 20:19:02] Registered route: Get /welcome
+[2025-08-19 20:19:02] Registering middleware: None
+[2025-08-19 20:19:02] Registered route: Get /products
+[2025-08-19 20:19:02] Registering middleware: None
+[2025-08-19 20:19:02] Registered route: Get /products/{id}
+[2025-08-19 20:19:02] Registering middleware: None
+[2025-08-19 20:19:02] Registered route: Delete /products/{id}
+[2025-08-19 20:19:02] Registering middleware: None
+[2025-08-19 20:19:02] Registered route: Put /products/{id}
+[2025-08-19 20:19:02] Registering middleware: None
+[2025-08-19 20:19:02] Registered route: GET /records
+[2025-08-19 20:19:02] uvicorn.error
+[2025-08-19 20:19:02] Registering middleware: None
+[2025-08-19 20:19:02] Registered route: Get /welcome
+[2025-08-19 20:19:02] Registering middleware: None
+[2025-08-19 20:19:02] Registered route: Get /products
+[2025-08-19 20:19:02] Registering middleware: None
+[2025-08-19 20:19:02] Registered route: Get /products/{id}
+[2025-08-19 20:19:02] Registering middleware: None
+[2025-08-19 20:19:02] Registered route: Delete /products/{id}
+[2025-08-19 20:19:02] Registering middleware: None
+[2025-08-19 20:19:02] Registered route: Put /products/{id}
+[2025-08-19 20:19:02] Registering middleware: None
+[2025-08-19 20:19:02] Registered route: GET /records

@@ -7,6 +7,7 @@ from contextlib import asynccontextmanager
 from routes.routes import routes  
 from core.Middleware import Middleware
 from util.config import config
+from util.debug import debug, DEBUG_FILE
 
 # Lifespan for DB connection pool
 
@@ -22,8 +23,7 @@ app = FastAPI(lifespan=lifespan)
 
 # Logging setup
 
-logger = logging.getLogger("uvicorn.error")
-logger.setLevel(logging.DEBUG)
+debug("uvicorn.error")
 
 # CORS middleware
 
@@ -39,7 +39,7 @@ app.add_middleware(
 
 @app.exception_handler(Exception)
 async def global_exception_handler(request: Request, exc: Exception):
-    logger.error(f"Unexpected error: {exc}")
+    debug(f"Unexpected error: {exc}")
     return JSONResponse(
         status_code=500,
         content={"message": "An unexpected error occurred", "error": str(exc)},
@@ -47,7 +47,7 @@ async def global_exception_handler(request: Request, exc: Exception):
 
 @app.exception_handler(404)
 async def not_found_handler(request: Request, exc):
-    logger.warning(f"404 Not Found: {request.url}")
+    debug(f"404 Not Found: {request.url}")
     return JSONResponse(
         status_code=404,
         content={"message": "Route not found", "error": str(exc)},
@@ -60,7 +60,7 @@ def register_middleware(middleware=None, middleware_args=[], middleware_kwargs={
 
         if not middleware: return handler
         if not (isinstance(middleware, type) and issubclass(middleware, Middleware)):
-            raise ValueError("Middleware must be a subclass of Middleware")
+            debug("Middleware must be a subclass of Middleware")
 
         async def middleware_wrapper(request: Request):
             return await middleware(*middleware_args, **middleware_kwargs).next(request, handler)
@@ -72,7 +72,7 @@ def register_middleware(middleware=None, middleware_args=[], middleware_kwargs={
 # Route registration
 
 def register_route(method, path, handler, middleware=None):
-    print(f"Registering middleware: {middleware}")
+    debug(f"Registering middleware: {middleware}")
     async def endpoint(request: Request):
         return await handler(request)
     
@@ -87,7 +87,7 @@ def register_route(method, path, handler, middleware=None):
             alias = middleware.split(':')[0]
             middleware_class = config('middlewares.aliases', {}).get(alias)
             if not middleware_class:
-                raise ValueError(f"No middleware found with alias {middleware}")
+                debug(f"No middleware found with alias {middleware}")
 
             remaining = middleware[len(alias)+1:]
             args = []
@@ -107,7 +107,7 @@ def register_route(method, path, handler, middleware=None):
             return
 
         if not isinstance(middleware, list):
-            raise ValueError(f"Expected middleware in route, found {type(middleware)}")
+            debug(f"Expected middleware in route, found {type(middleware)}")
         
         if len(middleware) != 2:
             for m in middleware:
@@ -148,7 +148,7 @@ def register_route(method, path, handler, middleware=None):
         methods=[method],
         name=f"{method}_{path.replace('/', '_')}"
     )
-    logger.debug(f"Registered route: {method} {path}")
+    debug(f"Registered route: {method} {path}")
 
 def bind_routes(base_path, routes_list):
     for route in routes_list:

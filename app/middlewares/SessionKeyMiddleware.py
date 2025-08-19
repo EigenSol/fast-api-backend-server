@@ -1,3 +1,8 @@
+
+import os, sys
+sys.path.append(os.path.abspath(os.path.join(__file__, "..")))
+
+from util.env import env
 from core.Middleware import Middleware
 
 class SessionKeyMiddleware(Middleware):
@@ -10,7 +15,7 @@ class SessionKeyMiddleware(Middleware):
         # check if request has 'session' in query params or json body
         session_key = request.query_params.get('session')
         if not session_key: return self.unauthorized_response()
-        print(f"SK = {session_key}")
+        if env('DEBUG', False): print(f"SK = {session_key}")
         return await handler(request)
 
     def unauthorized_response(self):
